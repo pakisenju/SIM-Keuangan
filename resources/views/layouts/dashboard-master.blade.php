@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | SIM Keuangan Paki</title>
+    <title>@yield('title') | SIM Keuangan</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
     @yield('style')
@@ -41,16 +41,20 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">UI COMPONENTS</span>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ url('/money-storage') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-database"></i>
+                                </span>
+                                <span class="hide-menu">Money Storage</span>
+                            </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-article"></i>
+                                    <i class="ti ti-target-arrow"></i>
                                 </span>
-                                <span class="hide-menu">Buttons</span>
+                                <span class="hide-menu">Target List</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -165,13 +169,14 @@
                     </ul>
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                            <p class="text-light fw-semibold fs-3 m-0">Fahki Rohandi</p>
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="../assets/images/profile/user-1.jpg" alt="" width="35"
                                         height="35" class="rounded-circle">
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
+                                <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end dropdown-menu-animate-up border-0 m-0"
                                     aria-labelledby="drop2">
                                     <div class="message-body">
                                         <a href="javascript:void(0)"
@@ -189,8 +194,11 @@
                                             <i class="ti ti-list-check fs-6"></i>
                                             <p class="mb-0 fs-3">My Task</p>
                                         </a>
-                                        <a href="./authentication-login.html"
-                                            class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                        <a href="javascript:void(0)" id="btnLogout"
+                                            class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-logout fs-6"></i>
+                                            <p class="mb-0 fs-3">Logout</p>
+                                        </a>
                                     </div>
                                 </div>
                             </li>
@@ -203,6 +211,35 @@
             <!-- Container Start -->
             @yield('container')
             <!-- Container End -->
+
+            <!-- Logout Modal Start-->
+            <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog"
+                aria-labelledby="logoutModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="logoutModalLabel">Konfirmasi Logout</h5>
+                            <button class="btn btn-outline-primary border-0 p-1 close" type="button"
+                                data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="ti ti-x"></i></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Apakah Anda yakin ingin logout dari akun ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger cancel" data-dismiss="modal">Batal</button>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="btn btn-primary" type="submit">
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Logout Modal End-->
         </div>
     </div>
     <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>
@@ -212,6 +249,33 @@
     <script src="{{ asset('assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+
+    <!-- Toastr Start -->
+    @include('components.toastr')
+    <!-- Toastr End -->
+
+    <!-- Datatable Start -->
+    @include('components.datatable')
+    <!-- Datatable End -->
+
+    {{-- Modal Script --}}
+    <script>
+        document.getElementById('btnLogout').addEventListener('click', function() {
+            var modal = new bootstrap.Modal(document.getElementById('logoutModal'));
+            modal.show();
+        });
+
+        document.getElementById('logoutModal').querySelector('.close').addEventListener('click', function() {
+            var modal = bootstrap.Modal.getInstance(document.getElementById('logoutModal'));
+            modal.hide();
+        });
+
+        document.getElementById('logoutModal').querySelector('.cancel').addEventListener('click', function() {
+            var modal = bootstrap.Modal.getInstance(document.getElementById('logoutModal'));
+            modal.hide();
+        });
+    </script>
+
     @yield('script')
 </body>
 

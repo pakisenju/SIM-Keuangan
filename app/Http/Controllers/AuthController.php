@@ -38,6 +38,6 @@ class AuthController extends Controller
         Session::flush();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('dashboard');
+        return redirect('/')->with('SUCCESS', 'Logout berhasil');
     }
 }

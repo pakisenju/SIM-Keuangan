@@ -4,9 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | SIM Keuangan Paki</title>
+    <title>@yield('title') | SIM Keuangan</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
+
+    {{-- Toastr Style --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- END: Page CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     @yield('style')
 </head>
 
@@ -27,13 +43,6 @@
                                     <h3 class="text-title text-light m-0">SIM Keuangan</h3>
                                 </a>
                                 <p class="text-center text-light">Input username dan password Anda</p>
-                                @if (session()->has('SUCCESS'))
-                                    <div class="alert alert-success" role="alert">{{ session('SUCCESS') }}</div>
-                                @endif
-
-                                @if (session()->has('ERROR'))
-                                    <div class="alert alert-warning" role="alert">{{ session('ERROR') }}</div>
-                                @endif
                                 <!-- Container Start -->
                                 @yield('container')
                                 <!-- Container End -->
@@ -46,6 +55,11 @@
     </div>
     <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Toastr Start -->
+    @include('components.toastr')
+    <!-- Toastr End -->
+
     @yield('script')
 </body>
 

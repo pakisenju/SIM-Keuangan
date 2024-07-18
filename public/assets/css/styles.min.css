@@ -4150,10 +4150,10 @@ fieldset:disabled .btn {
 }
 .btn-link {
     --bs-btn-font-weight: 400;
-    --bs-btn-color: var(--bs-link-color);
+    --bs-btn-color: #2a3547;
     --bs-btn-bg: transparent;
     --bs-btn-border-color: transparent;
-    --bs-btn-hover-color: var(--bs-link-hover-color);
+    --bs-btn-hover-color: #fff;
     --bs-btn-hover-border-color: transparent;
     --bs-btn-active-color: var(--bs-link-hover-color);
     --bs-btn-active-border-color: transparent;
@@ -6680,79 +6680,48 @@ fieldset:disabled .btn {
     filter: var(--bs-btn-close-white-filter);
 }
 .toast {
-    --bs-toast-zindex: 1090;
-    --bs-toast-padding-x: 0.75rem;
-    --bs-toast-padding-y: 0.5rem;
-    --bs-toast-spacing: 24px;
-    --bs-toast-max-width: 350px;
-    --bs-toast-font-size: 0.875rem;
-    --bs-toast-color: ;
-    --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
-    --bs-toast-border-width: var(--bs-border-width);
-    --bs-toast-border-color: var(--bs-border-color-translucent);
-    --bs-toast-border-radius: var(--bs-border-radius);
-    --bs-toast-box-shadow: var(--bs-box-shadow);
-    --bs-toast-header-color: var(--bs-secondary-color);
-    --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
-    --bs-toast-header-border-color: var(--bs-border-color-translucent);
-    width: var(--bs-toast-max-width);
-    max-width: 100%;
-    font-size: var(--bs-toast-font-size);
-    color: var(--bs-toast-color);
-    pointer-events: auto;
-    background-color: var(--bs-toast-bg);
+    flex-basis: 350px;
+    max-width: 350px;
+    font-size: 0.875rem;
+    background-color: rgba(255, 255, 255, 0.85);
     background-clip: padding-box;
-    border: var(--bs-toast-border-width) solid var(--bs-toast-border-color);
-    -webkit-box-shadow: var(--bs-toast-box-shadow);
-    box-shadow: var(--bs-toast-box-shadow);
-    border-radius: var(--bs-toast-border-radius);
-}
-.toast.showing {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     opacity: 0;
+    border-radius: 0.25rem;
 }
-.toast:not(.show) {
+
+.toast:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.toast.showing {
+    opacity: 1;
+}
+
+.toast.show {
+    display: block;
+    opacity: 1;
+}
+
+.toast.hide {
     display: none;
 }
-.toast-container {
-    --bs-toast-zindex: 1090;
-    position: absolute;
-    z-index: var(--bs-toast-zindex);
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    max-width: 100%;
-    pointer-events: none;
-}
-.toast-container > :not(:last-child) {
-    margin-bottom: var(--bs-toast-spacing);
-}
+
 .toast-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    padding: var(--bs-toast-padding-y) var(--bs-toast-padding-x);
-    color: var(--bs-toast-header-color);
-    background-color: var(--bs-toast-header-bg);
+    padding: 0.25rem 0.75rem;
+    color: #858796;
+    background-color: rgba(255, 255, 255, 0.85);
     background-clip: padding-box;
-    border-bottom: var(--bs-toast-border-width) solid
-        var(--bs-toast-header-border-color);
-    border-top-left-radius: calc(
-        var(--bs-toast-border-radius) - var(--bs-toast-border-width)
-    );
-    border-top-right-radius: calc(
-        var(--bs-toast-border-radius) - var(--bs-toast-border-width)
-    );
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
 }
-.toast-header .btn-close {
-    margin-right: calc(-0.5 * var(--bs-toast-padding-x));
-    margin-left: var(--bs-toast-padding-x);
-}
+
 .toast-body {
-    padding: var(--bs-toast-padding-x);
-    word-wrap: break-word;
+    padding: 0.75rem;
 }
 .modal {
     --bs-modal-zindex: 1055;

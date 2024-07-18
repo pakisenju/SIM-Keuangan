@@ -13,3 +13,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Halaman Sistem
 Route::get('/', [PagesController::class, 'dashboardPage'])->name('dashboard')->middleware('auth');
+Route::get('/money-storage', [PagesController::class, 'moneyStoragePage'])->name('money-storage')->middleware('auth');

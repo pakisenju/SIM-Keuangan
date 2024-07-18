@@ -6,112 +6,74 @@
 @section('container')
     <div class="container-fluid">
         <!--  Row 1 -->
-        <div class="row">
+        <div class="row mt-9">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
-                        <div class="card overflow-hidden">
-                            <div class="card-body bg-info p-3">
-                                <h5 class="card-title fw-semibold">Pemasukkan Hari ini</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <h4 class="fw-semibold mb-2">IDR 15.000</h4>
-                                    </div>
-                                </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
-                        <div class="card overflow-hidden">
-                            <div class="card-body bg-info p-3">
-                                <h5 class="card-title fw-semibold">Pemasukkan Bulan ini</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <h4 class="fw-semibold mb-2">IDR 1.500.000</h4>
-                                    </div>
-                                </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
+                    <div class="col-lg-6">
                         <div class="card overflow-hidden">
                             <div class="card-body bg-success p-3">
-                                <h5 class="card-title fw-semibold">Total Pemasukkan</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <h4 class="fw-semibold mb-2">IDR 1.515.000</h4>
-                                    </div>
-                                </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
-                        <div class="card overflow-hidden">
-                            <div class="card-body bg-warning p-3">
-                                <h5 class="card-title fw-semibold">Pengeluaran Hari ini</h5>
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="fw-semibold mb-2">IDR 50.000</h4>
+                                        <h5 class="card-title fw-semibold">Total Pemasukkan</h5>
+                                        <h4 class="fw-semibold mb-2">IDR 1.515.000</h4>
+                                        <a class="btn btn-link p-0" href="">
+                                            Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 align-items-center">
+                                        <div class="d-flex justify-content-center">
+                                            <div
+                                                class="text-dark bg-light rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                <i class="ti ti-database-import fs-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-center align-items-center mt-2">
+                                            <span
+                                                class="me-1 rounded-circle bg-dark round-20 d-flex align-items-center justify-content-center">
+                                                <i class="ti ti-arrow-up text-success"></i>
+                                            </span>
+                                            <p class="text-dark me-1 fs-6 mb-0">+9%</p>
+                                            <p class="fs-6 mb-0">last year</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
-                        <div class="card overflow-hidden">
-                            <div class="card-body bg-warning p-3">
-                                <h5 class="card-title fw-semibold">Pengeluaran Bulan ini</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <h4 class="fw-semibold mb-2">IDR 1.000.000</h4>
-                                    </div>
-                                </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <!-- Yearly Breakup -->
+                    <div class="col-lg-6">
                         <div class="card overflow-hidden">
                             <div class="card-body bg-danger p-3">
-                                <h5 class="card-title fw-semibold">Total Pengeluaran</h5>
                                 <div class="row align-items-center">
-                                    <div class="col-12">
+                                    <div class="col-8">
+                                        <h5 class="card-title fw-semibold">Total Pengeluaran</h5>
                                         <h4 class="fw-semibold mb-2">IDR 1.050.000</h4>
+                                        <a class="btn btn-link p-0" href="">
+                                            Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex justify-content-center">
+                                            <div
+                                                class="text-light bg-dark rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                <i class="ti ti-database-export fs-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-center align-items-center mt-2">
+                                            <span
+                                                class="me-1 rounded-circle bg-dark round-20 d-flex align-items-center justify-content-center">
+                                                <i class="ti ti-arrow-down text-danger"></i>
+                                            </span>
+                                            <p class="text-dark me-1 fs-6 mb-0">+9%</p>
+                                            <p class="fs-6 mb-0">last year</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <a class="btn btn-link p-0" href="">
-                                    Lihat selengkapnya <i class="ti ti-arrow-forward-up"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-strech">
+            <div class="col-lg-8 d-flex align-items-strech">
                 <div class="card w-100 bg-dark">
                     <div class="card-body">
                         <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
@@ -131,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-strech">
+            <div class="col-lg-4 d-flex align-items-strech">
                 <div class="card w-100 bg-dark">
                     <div class="card-body">
                         <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
@@ -150,7 +112,7 @@
                 <div class="card w-100 bg-dark">
                     <div class="card-body p-4">
                         <div class="mb-4">
-                            <h5 class="card-title text-light fw-semibold">Transaksi Terakhir</h5>
+                            <h5 class="card-title text-light fw-semibold">Riwayat Transaksi</h5>
                         </div>
                         <ul class="timeline-widget mb-0 position-relative mb-n5">
                             <li class="timeline-item d-flex position-relative overflow-hidden">
@@ -217,11 +179,11 @@
                     <div class="card-body p-4">
                         <h5 class="card-title text-light fw-semibold mb-4">Transaksi Terakhir</h5>
                         <div class="table-responsive">
-                            <table class="table table-dark text-nowrap mb-0 align-middle">
+                            <table class="table table-striped-dark datatable text-nowrap mb-0 align-middle">
                                 <thead class="text-light fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold text-light mb-0">Id</h6>
+                                            <h6 class="fw-semibold text-light mb-0">No</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold text-light mb-0">Assigned</h6>
@@ -251,7 +213,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
+                                                <span class="badge w-100 bg-primary rounded-3 fw-semibold">Low</span>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
@@ -271,7 +233,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <span class="badge bg-secondary rounded-3 fw-semibold">Medium</span>
+                                                <span class="badge w-100 bg-secondary rounded-3 fw-semibold">Medium</span>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
@@ -291,7 +253,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <span class="badge bg-danger rounded-3 fw-semibold">High</span>
+                                                <span class="badge w-100 bg-danger rounded-3 fw-semibold">High</span>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
@@ -311,7 +273,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <span class="badge bg-success rounded-3 fw-semibold">Critical</span>
+                                                <span class="badge w-100 bg-success rounded-3 fw-semibold">Critical</span>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
@@ -326,7 +288,7 @@
             </div>
         </div>
         <div class="row">
-            <h3 class="text-light my-9">Purchase Plan</h3>
+            <h3 class="text-light my-9">Rencana Pembelian</h3>
             <div class="col-sm-6 col-xl-3">
                 <div class="card bg-dark overflow-hidden rounded-2">
                     <div class="position-relative">
